@@ -1,23 +1,54 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>LAX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Are you at risk for a stroke?</title>
 </head>
-
-
-
 <body>
 
-<p>Hello UNCC Data Analytics</p>
-  <body style="background-color:powderblue;">
+    <div class="container"></div>
+    <h1>Enter your details below to see whether you are at risk of having a stroke.</h1>
+    <hr>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+    <form action="/api/predict" method="get" target="_blank">
+
+        <div>
+            <h4>Please enter a number in the following fields.</h4>
+            <p>Age: <input type="text" name="age"></p>
+            <p>Average Glucose Level: <input type="text" name="agl"></p>
+            <p>BMI: <input name="text" name="bmi"></p>
+        </div>
+
+        <div>
+            <h4>Please select the drop-down option that applies to you right now.</h4>
+            <p>Work type <select name="work_type">
+                <option value="self_employed">Self employed</option>
+                <option value="children">Children</option>
+                <option value="other">Other</option>
+            </select></p>
+
+            <p>Smoking status <select name="smoking_status">
+                <option value="smokes">Smokes</option>
+                <option value="formerly_smoked">Formerly smoked</option>
+                <option value="never_smoked">Never smoked</option>
+            </select></p>
+        </div>
+
+        <div>
+            <h4>Please check the box if the following apply to you</h4>
+            <p>Has Hypertension <input type="checkbox" name="hypertension"></p>
+            <p>Has Heart Disease <input type="checkbox" name="heart_disease"></p>
+            <p>Ever married <input type="checkbox"name="ever_married"></p>
+        </div>
 
 
-
-
+         <button>
+             <input type="submit" value="Get results">
+         </button>
+    
+    </form>
+    
 </body>
+</html>
